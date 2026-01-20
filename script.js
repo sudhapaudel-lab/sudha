@@ -35,9 +35,9 @@ if (hamburger && navLinks) {
 const navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.15)';
+        navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.12)';
     } else {
-        navbar.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.1)';
+        navbar.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.08)';
     }
 });
 
@@ -56,30 +56,20 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-// Observe project cards and sections
-document.querySelectorAll('.project-card, .about, .contact, .stat').forEach(el => {
+// Observe profile card and sections
+document.querySelectorAll('.profile-card, .about, .contact').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
 });
 
-// Ripple effect on button clicks
-document.querySelectorAll('.cta-button, .contact-btn').forEach(button => {
-    button.addEventListener('click', function(e) {
-        const ripple = document.createElement('span');
-        const rect = this.getBoundingClientRect();
-        const size = Math.max(rect.width, rect.height);
-        const x = e.clientX - rect.left - size / 2;
-        const y = e.clientY - rect.top - size / 2;
-
-        ripple.style.width = ripple.style.height = size + 'px';
-        ripple.style.left = x + 'px';
-        ripple.style.top = y + 'px';
-        ripple.classList.add('ripple');
-
-        this.appendChild(ripple);
-
-        setTimeout(() => ripple.remove(), 600);
+// Tech badge hover animation
+document.querySelectorAll('.tech-badge').forEach(badge => {
+    badge.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-3px)';
+    });
+    badge.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
     });
 });

@@ -1,23 +1,23 @@
-# Portfolio Website
+# Professional Portfolio Website
 
-A modern, responsive introductory portfolio webpage with a clean and professional design.
+A clean and professional portfolio website inspired by modern platforms like DataCamp, featuring a beautiful profile card design with contact information.
 
 ## Features
 
+- **Professional Profile Card** - Centered design with avatar, name, title, and institution
+- **Technologies Display** - Showcase your skills with technology badges
 - **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
-- **Smooth Animations** - Engaging animations and scroll effects
-- **Navigation** - Sticky navigation bar with smooth scrolling
-- **Hero Section** - Eye-catching landing section with call-to-action
-- **About Section** - Tell visitors about yourself and your skills
-- **Projects Showcase** - Display your featured work
-- **Contact Section** - Easy ways for visitors to reach out
-- **Modern Styling** - Clean, professional color scheme and typography
+- **Modern Navigation** - Sticky navbar with smooth scrolling
+- **About Section** - Tell your story and background
+- **Contact Section** - Easy ways to connect via email, LinkedIn, GitHub, and Twitter
+- **Smooth Animations** - Scroll-triggered fade-ins and interactive elements
+- **Clean Typography** - Professional and readable typography
 
 ## File Structure
 
 ```
 portfolio/
-├── index.html      # Main HTML file
+├── index.html      # Main HTML file with profile card
 ├── styles.css      # CSS styling
 ├── script.js       # JavaScript functionality
 └── README.md       # This file
@@ -27,36 +27,41 @@ portfolio/
 
 1. Open `index.html` in your web browser
 2. Customize the content with your information:
-   - Replace "Portfolio" with your name/title
-   - Update the about section with your background
-   - Add your projects with descriptions
-   - Update contact links with your email, LinkedIn, GitHub, etc.
+   - Update your name and title
+   - Change institution and location
+   - Add your profile initial (avatar circle)
+   - Update technology/skill badges
+   - Add your bio in the about section
+   - Update contact links
 
 ## Customization
 
+### Profile Card
+Edit the profile section in `index.html` to:
+- Change your name, title, and institution
+- Update the avatar circle initial
+- Modify the "Portfolio Highlights" section
+- Add or remove technology badges
+
+### About Section
+Update your bio and background story to reflect your professional experience and goals.
+
+### Contact Information
+Update the contact button links with:
+- Your email address
+- LinkedIn profile URL
+- GitHub profile URL
+- Twitter/social media profiles
+
 ### Colors
-Edit the CSS variables in `styles.css`:
+Main color scheme uses blue tones. Edit CSS variables in `styles.css`:
 ```css
 :root {
-    --primary-color: #0066cc;
-    --secondary-color: #004d99;
-    --text-color: #333;
-    --light-bg: #f5f5f5;
+    --primary-blue: #1e88e5;
+    --dark-blue: #0d47a1;
+    --light-blue: #42a5f5;
 }
 ```
-
-### Content
-Edit `index.html` to:
-- Update your name and title
-- Add your project details
-- Include your contact information
-- Add your bio and skills
-
-### Styling
-Modify `styles.css` to:
-- Change fonts, colors, and spacing
-- Adjust layout and animations
-- Customize responsive breakpoints
 
 ## Browser Support
 
@@ -68,12 +73,13 @@ Works in all modern browsers including:
 
 ## Tips
 
-- Use placeholder text and update with your actual content
-- Add real project links in the "View Project" buttons
-- Update contact links with your actual email and social profiles
-- Consider adding a portfolio image or favicon
-- Test on mobile devices to ensure responsive design works well
+- Replace placeholder text with your actual information
+- Use meaningful technology badges that represent your skills
+- Keep the about section concise and impactful
+- Update contact links with real URLs
+- Consider adding a profile image instead of just the initial
 
 ## License
 
 Feel free to use this template for your portfolio!
+
