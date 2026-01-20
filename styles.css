@@ -167,19 +167,6 @@ body {
     position: relative;
 }
 
-.beta-badge {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: var(--text-dark);
-    color: var(--white);
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
 .profile-header {
     text-align: center;
     margin-bottom: 2rem;
@@ -200,19 +187,12 @@ body {
     box-shadow: 0 10px 30px rgba(33, 150, 243, 0.3);
     position: relative;
     overflow: hidden;
-    cursor: pointer;
     transition: var(--transition);
 }
 
 .avatar-circle:hover {
     box-shadow: 0 15px 40px rgba(33, 150, 243, 0.5);
     transform: scale(1.05);
-}
-
-.profile-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .photo-placeholder {
@@ -389,47 +369,41 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
-    padding: 12px 24px;
-    border-radius: 8px;
+    padding: 0.75rem 1.2rem;
+    border-radius: 20px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     transition: var(--transition);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     cursor: pointer;
-    border: 2px solid;
-}
-
-.btn-email {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    border-color: #667eea;
-    color: var(--white);
-}
-
-.btn-linkedin {
-    background: linear-gradient(135deg, #0077b5, #004d87);
-    border-color: #0077b5;
-    color: var(--white);
-}
-
-.btn-github {
-    background: linear-gradient(135deg, #333, #555);
-    border-color: #555;
-    color: var(--white);
-}
-
-.btn-twitter {
-    background: linear-gradient(135deg, #1DA1F2, #1a91da);
-    border-color: #1DA1F2;
-    color: var(--white);
-}
-
-.contact-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    background: #f0f0f0;
+    color: var(--text-dark);
+    border: none;
 }
 
 .contact-btn i {
     font-size: 1.2rem;
+    color: var(--primary-blue);
+}
+
+.contact-btn:hover {
+    background: var(--light-blue);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-btn:hover i {
+    color: var(--white);
+}
+
+.btn-email {
+}
+
+.btn-linkedin {
+}
+
+.btn-github {
 }
 
 /* ===== FOOTER ===== */

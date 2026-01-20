@@ -12,32 +12,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Photo upload functionality
-const avatarCircle = document.querySelector('.avatar-circle');
-const profilePhoto = document.getElementById('profilePhoto');
-const photoPlaceholder = document.querySelector('.photo-placeholder');
-
-if (avatarCircle) {
-    avatarCircle.addEventListener('click', function() {
-        const input = document.createElement('input');
-        input.type = 'file';
-        input.accept = 'image/*';
-        input.onchange = function(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    profilePhoto.src = e.target.result;
-                    profilePhoto.style.display = 'block';
-                    photoPlaceholder.style.display = 'none';
-                };
-                reader.readAsDataURL(file);
-            }
-        };
-        input.click();
-    });
-}
-
 // Hamburger Menu Toggle
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
