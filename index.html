@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudha Paudel </title>
+    <title> Sudha Paudel </title>
     <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo"><i class="fas fa-briefcase"></i> Portfolio</div>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <div class="logo">
+                <span>Sudha Paudel</span>
+            </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -21,6 +27,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#profile">Profile</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -28,68 +35,159 @@
 
     <!-- Profile Section -->
     <section id="profile" class="profile-section">
-        <div class="profile-container">
-            <div class="profile-card">
-                <div class="profile-header">
+        <div class="profile-bg-texture"></div>
+        <div class="container profile-layout">
+            <div class="profile-card reveal">
+                <div class="avatar-wrap">
+                    <div class="avatar-ring"></div>
                     <div class="avatar-circle">
-                        <img id="profilePhoto" class="profile-photo" src="1000010483.jpg" alt="Profile Photo" style="display: none;">
-                        <span class="photo-placeholder">SP</span>
+                        <img id="profilePhoto" class="profile-photo" src="sudha_image.jpg" alt="Sudha Paudel" onerror="this.style.display='none'">
+                        <span class="avatar-initials">SP</span>
                     </div>
-                    <h1 class="profile-name">Sudha Paudel</h1>
-                    <p class="profile-title">Student | Data Enthusiast</p>
-                    <p class="profile-institution">Gandaki College of Engineering and Science | Nepal</p>
                 </div>
-
-                <div class="profile-section-divider"></div>
-
-                <div class="profile-technologies">
-                    <h3>Skills</h3>
+                <div class="profile-text">
+                    <p class="profile-eyebrow">Data Enthusiast · Nepal</p>
+                    <h1 class="profile-name">Sudha Paudel</h1>
+                    <p class="profile-sub">Gandaki College of Engineering and Science</p>
+                    <div class="divider"></div>
+                    <p class="profile-skills-label">Skills</p>
                     <div class="tech-badges">
                         <span class="tech-badge"><i class="fab fa-python"></i> Python</span>
                         <span class="tech-badge"><i class="fas fa-database"></i> SQL</span>
                         <span class="tech-badge"><i class="fas fa-table"></i> Excel</span>
-                        <span class="tech-badge"><i class="fas fa-chart-pie"></i> PowerBI</span>
+                        <span class="tech-badge"><i class="fas fa-chart-pie"></i> Power BI</span>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="profile-tagline">
-            <h2>Turning raw data into meaningful, actionable insights.</h2>
+            <div class="profile-tagline reveal reveal-delay">
+                <h2>Turning raw data into<br><em>meaningful, actionable insights.</em></h2>
+                <div class="scroll-hint">
+                    <span> </span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about-section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p class="about-text">
-                   I am a data enthusiast with hands-on experience in Python, SQL, Excel, and Power BI. I am currently expanding into big data technologies to work with scalable, cloud-based data systems and build efficient, end-to-end data solutions.
-                </p>
-                <p class="about-text">
-                    I am interested in collecting, cleaning, and analyzing data to extract meaningful insights that drive value in business decision-making
-                    I'm always exploring new ways to enhance my skills and contribute to meaningful projects.
-                </p>
+            <div class="section-header">
+                <span class="section-eyebrow">Who I Am</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-block reveal">
+                    <div class="about-icon"><i class="fas fa-chart-line"></i></div>
+                    <p>I am a data enthusiast with hands-on experience in Python, SQL, Excel, and Power BI. I am currently expanding into big data technologies to work with scalable, cloud-based data systems and build efficient, end-to-end data solutions.</p>
+                </div>
+                <div class="about-block reveal reveal-delay">
+                    <div class="about-icon"><i class="fas fa-lightbulb"></i></div>
+                    <p>I am interested in collecting, cleaning, and analyzing data to extract meaningful insights that drive value in business decision-making. I'm always exploring new ways to enhance my skills and contribute to meaningful projects.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates-section">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-intro">Let's connect! Feel free to reach out through any of these platforms.</p>
+            <div class="section-header">
+                <span class="section-eyebrow">Credentials</span>
+                <h2 class="section-title">Certificates</h2>
+            </div>
+            <div class="certificates-grid">
+
+                <div class="cert-card reveal">
+                    <div class="cert-thumb" onclick="openCertModal('associate_data_engineer.png', 'Associate Data Engineering')">
+                        <img src="associate_data_engineer.png" alt="Associate Data Engineering" class="cert-img">
+                        <div class="cert-thumb-overlay">
+                            <span class="cert-hover-label">View Fullscreen</span>
+                        </div>
+                        <div class="cert-shine"></div>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-tag">DataCamp</span>
+                        <h4>Associate Data Engineering</h4>
+                    </div>
+                </div>
+
+                <div class="cert-card reveal">
+                    <div class="cert-thumb" onclick="openCertModal('data_warehousing_concept.png', 'Data Warehousing Concept')">
+                        <img src="data_warehousing_concept.png" alt="Data Warehousing Concept" class="cert-img">
+                        <div class="cert-thumb-overlay">
+                            <span class="cert-hover-label">View Fullscreen</span>
+                        </div>
+                        <div class="cert-shine"></div>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-tag">DataCamp</span>
+                        <h4>Data Warehousing Concepts</h4>
+                    </div>
+                </div>
+
+                <div class="cert-card reveal">
+                    <div class="cert-thumb" onclick="openCertModal('intermediate_sql.png', 'Intermediate SQL')">
+                        <img src="intermediate_sql.png" alt="Intermediate SQL" class="cert-img">
+                        <div class="cert-thumb-overlay">
+                            <span class="cert-hover-label">View Fullscreen</span>
+                        </div>
+                        <div class="cert-shine"></div>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-tag">DataCamp</span>
+                        <h4>Intermediate SQL</h4>
+                    </div>
+                </div>
+
+                <div class="cert-card reveal">
+                    <div class="cert-thumb" onclick="openCertModal('joining_data_in_sql.png', 'Joining Data in SQL')">
+                        <img src="joining_data_in_sql.png" alt="Joining Data in SQL" class="cert-img">
+                        <div class="cert-thumb-overlay">
+                            <span class="cert-hover-label">View Fullscreen</span>
+                        </div>
+                        <div class="cert-shine"></div>
+                    </div>
+                    <div class="cert-info">
+                        <span class="cert-tag">DataCamp</span>
+                        <h4>Joining Data in SQL</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modal -->
+    <div class="cert-modal" id="certModal" role="dialog" aria-modal="true" aria-label="Certificate viewer">
+        <div class="cert-modal-backdrop" onclick="closeCertModal()"></div>
+        <div class="cert-modal-inner">
+            <div class="cert-modal-header">
+                <span class="cert-modal-title" id="certModalTitle"></span>
+                <button class="cert-modal-close" onclick="closeCertModal()" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cert-modal-body">
+                <img id="certModalImg" src="" alt="Certificate" style="width:100%;height:100%;object-fit:contain;display:block;background:#f5f0e8;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Say Hello</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-desc">Let's connect — reach out through any of these platforms.</p>
+            </div>
             <div class="contact-methods">
-                <a href="sudhapaudel111@gmail.com" class="contact-btn btn-email">
-                    <i class="fas fa-envelope"></i>
-                    <span>Email</span>
-                </a>
-                <a href="https://www.linkedin.com/in/sudha-paudel-13519b280/" class="contact-btn btn-linkedin">
+                <a href="https://www.linkedin.com/in/sudha-paudel-13519b280/" class="contact-btn" target="_blank" rel="noopener">
                     <i class="fab fa-linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
-                <a href="https://github.com/sudhhaap" class="contact-btn btn-github">
+                <a href="https://github.com/sudhhaap" class="contact-btn" target="_blank" rel="noopener">
                     <i class="fab fa-github"></i>
                     <span>GitHub</span>
                 </a>
